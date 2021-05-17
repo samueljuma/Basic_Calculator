@@ -1,6 +1,7 @@
 # Basic_Calculator
 A basic calculator written in Kotlin
-###Tech Stack
+
+### Tech Stack
   * [Data Binding][1] - Minimizes finding views by ID
 
 ### Screenshots
