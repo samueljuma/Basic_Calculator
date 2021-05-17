@@ -77,12 +77,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun equalsOperation() {
-        if (input_editText.text.toString() == ""){
-            secondNumber =0.0
-            operator =' '
-        }else {
-            secondNumber = input_editText.text.toString().toDouble()}
-
+        secondNumber = if (input_editText.text.toString() == ""){
+            0.0
+        }else {input_editText.text.toString().toDouble()}
         myAnswer = when (operator) {
             '+' -> firstNumber + secondNumber
             '-' -> firstNumber - secondNumber
@@ -92,11 +89,13 @@ class MainActivity : AppCompatActivity() {
             else -> secondNumber
         }
         result_textView.text = myAnswer.toString()
-        // clear where necessary
+
+        //clear where necessary
         input_editText.setText("")
         firstNumber = 0.0
         secondNumber = 0.0
         operator = ' '
+
     }
 
     private fun btnOnclick(number: String) {
